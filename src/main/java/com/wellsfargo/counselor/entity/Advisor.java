@@ -28,9 +28,7 @@ public class Advisor {
     @Column(nullable = false)
     private String email;
 
-    protected Advisor() {
-
-    }
+    public Advisor() {}
 
     public Advisor(String firstName, String lastName, String address, String phone, String email) {
         this.firstName = firstName;
@@ -82,5 +80,12 @@ public class Advisor {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    @Override
+    public String toString() {
+        return "Advisor: " + firstName + " " + lastName
+                + ", Address: " + address
+                + ", Phone: " + phone
+                + ", Email: " + email;
     }
 }
