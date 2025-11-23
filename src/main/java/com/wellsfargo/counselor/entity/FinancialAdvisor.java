@@ -7,6 +7,16 @@ import java.util.List;
 @Entity
 public class FinancialAdvisor {
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Id
+    public Long id;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long advisorId;
